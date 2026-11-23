@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusConnect — Working App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <header class="masthead">
+    <div class="brandmark">
+      <div class="pin">C</div>
+      <div>
+        <h1 class="title">CampusConnect</h1>
+        <div class="subtitle">College Event Management &amp; Notification Platform · working prototype</div>
+      </div>
+    </div>
+    <div class="register-tag">MOCK BACKEND · LOCAL STORAGE</div>
+  </header>
+
+  <hr class="rule">
+
+  <div class="stage">
+    <aside class="controls">
+      <div class="role-block">
+        <div class="role-label"><span class="dot" style="background:var(--amber)"></span> Student · screens 1–8</div>
+        <div class="chip-col" id="nav-student"></div>
+      </div>
+      <div class="role-block">
+        <div class="role-label"><span class="dot" style="background:var(--teal)"></span> Society head · screens 9–10</div>
+        <div class="chip-col" id="nav-head"></div>
+      </div>
+      <div class="role-block">
+        <div class="role-label"><span class="dot" style="background:var(--coral)"></span> College admin · screens 11–12</div>
+        <div class="chip-col" id="nav-admin"></div>
+      </div>
+
+      <div class="demo-block">
+        <div class="role-label"><span class="dot" style="background:#fff"></span> Demo accounts</div>
+        <div class="btn-row">
+          <button class="mini-btn" data-action="demo-login" data-email="student@college.edu">Student</button>
+          <button class="mini-btn" data-action="demo-login" data-email="head@college.edu">Head</button>
+          <button class="mini-btn" data-action="demo-login" data-email="admin@college.edu">Admin</button>
+        </div>
+        <button class="mini-btn danger" data-action="reset-data">Reset demo data</button>
+      </div>
+
+      <div class="screen-caption" id="caption">Select a screen to preview it.</div>
+    </aside>
+
+    <main class="phone-dock">
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="statusbar"><span id="clock">9:41</span><span>●●● ⌁ 100%</span></div>
+          <div class="screen-body" id="view"></div>
+          <div class="bottomnav" id="bottomnav"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div id="toast-root" aria-live="polite"></div>
+<div id="modal-root"></div>
+<script src="app.js"></script>
+</body>
+</html>
